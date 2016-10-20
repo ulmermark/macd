@@ -8,7 +8,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Component;
 
 import com.saluki.algotrading.marketdata.MarketDataResource;
-import com.saluki.algotrading.strategy.service.StrategyService;
+import com.saluki.algotrading.strategy.core.StrategyServiceGroup;
 
 @SpringBootApplication
 @EnableScheduling
@@ -20,11 +20,11 @@ public class AlgoTradingApplication {
 
     @Component
     public static class OnAppStartup implements CommandLineRunner {
-        private final StrategyService service;
+        private final StrategyServiceGroup service;
         private final MarketDataResource marketData;
         
         @Autowired
-        public OnAppStartup( StrategyService service, MarketDataResource marketData)
+        public OnAppStartup( StrategyServiceGroup service, MarketDataResource marketData)
         {
         	this.marketData = marketData;
             this.service = service;

@@ -1,4 +1,4 @@
-package com.saluki.algotrading.core.strategy;
+package com.saluki.algotrading.strategy.core;
 
 public interface Strategy {
 	

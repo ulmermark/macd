@@ -17,6 +17,17 @@ public class NewOrderSingle extends FixMessage{
 	public String getStrategy() {
 		return strategy;
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("NewOrderSingle [symbol=");
+		builder.append(symbol);
+		builder.append(", strategy=");
+		builder.append(strategy);
+		builder.append("]");
+		return builder.toString();
+	}
     
     
 }
