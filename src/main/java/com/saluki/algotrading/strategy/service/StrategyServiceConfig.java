@@ -31,9 +31,20 @@ public class StrategyServiceConfig {
     
     @ConfigurationProperties(prefix="strategy-svc")
     public static class StrategyServiceProperties {
+    	
+    	private String name;
+    	
         public StrategyServiceProperties()
         {
         }
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
 
     }
 }        

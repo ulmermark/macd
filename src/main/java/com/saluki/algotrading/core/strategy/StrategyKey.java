@@ -9,7 +9,7 @@ public class StrategyKey {
     private final String sid;
     private final String tid;
 
-    public StrategyKey(NewOrderSingle nos)
+    public StrategyKey(final NewOrderSingle nos)
     {
         this.symbol = nos.getSymbol();
         this.tid = nos.getTid();

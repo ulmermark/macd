@@ -34,7 +34,7 @@ public class AlgoTradingController{
         {
 	        try {
 	        	NewOrderSingle nos = new NewOrderSingle(symbol, strategy);
-	        	return this.service.watch( nos);
+	        	return this.service.process( nos);
 	        } catch (Exception ex) {
 	                log.error("{}", ex);
 	                throw ex;
